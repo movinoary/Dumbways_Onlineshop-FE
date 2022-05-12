@@ -1,0 +1,137 @@
+:root{
+  --black       : #0b0b0b;
+  --blackgrey   : #181818;
+  --grey        : #bcbcbc;
+  --fontgrey    : #606060;
+  --orange      : #F74D4D;
+  --white       : #FFF;
+  --green       : #56C05A;
+}
+
+.card-product{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border-radius: 7px;
+    background-color: var(--fontgrey);
+    overflow: hidden;
+}
+
+.card-product img{
+    width: 250px;
+    height: 300px;
+}
+
+.card-desc{
+    padding: 15px;
+}
+
+.card-desc h4{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.card-desc p{
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-bottom: 3px;
+}
+
+/* ---- Start Card Transaction ----- */
+.card-trans{
+    width: 525px;
+    height: 120px;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #303030;
+}
+
+.card-trans img{
+    width: 80px;
+    height: 100px;
+}
+
+.card-trans-desc{
+    margin-left: 1rem;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-trans-desc h2{
+    color: var(--orange);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+.card-trans-desc h4{
+    color: var(--orange);
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+.card-trans-desc h4 span{
+    font-weight: 600;
+}
+
+.card-trans-desc p{
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+.card-trans-desc h3{
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+}
+
+.card-trans-logo img{
+    width: 75px;
+    height: 100px;
+}
+/* ---- End Card Transaction ----- */
+
+/* ---- Start Card Account ----- */
+.card-account{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: left;
+    width: 400px;
+    padding: 0.5rem;
+}
+
+.card-account img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.card-account-name{
+    margin-left: 1rem;
+}
+
+.card-account-name h3{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.card-account-name p{
+    font-size: 0.7rem;
+    font-weight: 300;
+    width: 300px;
+    text-align: justify;
+    overflow: hidden;
+    color: var(--white);
+}
+
+/* ---- End Card Account ----- */

@@ -1,0 +1,88 @@
+:root{
+  --black       : #0b0b0b;
+  --blackgrey   : #181818;
+  --grey        : #bcbcbc;
+  --fontgrey    : #606060;
+  --orange      : #F74D4D;
+  --white       : #FFF;
+  --green       : #56C05A;
+}
+
+/* ----- Start Input ----- */
+.sub-input{
+    width: 100%;
+    padding: 7px;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    background: rgba(210, 210, 210, 0.25);
+    color: var(--white);
+}
+/* ----- End Input ----- */
+
+/* ----- Start Button ----- */
+.sub-button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.orange{
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.black{
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.green{
+    color: var(--white);
+    background-color: var(--green);
+}
+
+.orange:hover{
+    background-color: #e70000;
+    transition: 0.5s;
+}
+
+.black:hover{
+    background-color: #262626;
+    transition: 0.5s;
+}
+
+.green:hover{
+    background-color: #00ff08;
+    transition: 0.5s;
+}
+/* ----- End Button ----- */
+
+/* ----- Start Paragraf ----- */
+.paragraf-row{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.paragraf-row h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--orange);
+    margin-bottom: 3px;
+}
+
+.paragraf-row p{
+    color: var(--white);
+    font-size: 0.8rem;
+    text-align: justify;
+    font-weight: 500;
+}
+/* ----- End Paragraf ----- */
+
