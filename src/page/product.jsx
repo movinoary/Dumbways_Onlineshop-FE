@@ -1,5 +1,6 @@
 import React from 'react'
 import * as Components from '../components/index'
+import { DataProduct } from '../data/product'
 
 
 const Product = () => {
@@ -9,12 +10,19 @@ const Product = () => {
         <h3>Product</h3>
       </div>
       <div className='product-list'>
-        <Components.CardProduct />
-        <Components.CardProduct />
-        <Components.CardProduct />
-        <Components.CardProduct />
-        <Components.CardProduct />
-      </div>
+        {DataProduct.map((product,index) => {
+          return (
+            <Components.CardProduct 
+              key={index}
+              path={product.title}
+              image={product.image}
+              title={product.title}
+              price={product.price}
+              stock={product.qty}
+            />
+            )
+          })}
+        </div>
     </div>
   )
 }

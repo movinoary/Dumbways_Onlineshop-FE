@@ -2,6 +2,7 @@
 import Home from "./home";
 import Product from "./product";
 import DetailProduct from "./detailProduct";
+import Compare from "./compare";
 import Complain from "./complain";
 import Profile from "./profile";
 import { RouteUser ,RouteAdmin } from "./routes";
@@ -20,6 +21,7 @@ export {
     Home, 
     Product,
     DetailProduct,
+    Compare,
     Complain,
     Profile,
     RouteUser,

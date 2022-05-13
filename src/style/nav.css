@@ -17,6 +17,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--black);
 }
 
 .nav-left img{
@@ -36,11 +37,26 @@
 
 .txt-dec{
     text-decoration: none;
+    color: var(--white);
 }
 
 .nav-right li{
     color: #fff;
     margin: 0 15px;
     font-size: 1rem;
+    transition: 0.5s;
+}
 
+.nav-right ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--orange);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-right ul li:hover::after{
+    width: 100%;
 }

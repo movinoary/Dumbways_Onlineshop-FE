@@ -9,7 +9,8 @@ const RouteUser = () => {
     <Components.NavUser />
     <Routes>
         <Route exact path='/' element={<Page.Product />}/>
-        <Route exact path='product/1' element={<Page.DetailProduct />} />
+        <Route exact path='product/:title' element={<Page.DetailProduct />} />
+        <Route exact path='compare' element={<Page.Compare />} />
         <Route exact path='complain' element={<Page.Complain />} />
         <Route exact path='profile' element={<Page.Profile />} />
     </Routes>
@@ -23,11 +24,12 @@ const RouteAdmin = () => {
       <Components.NavAdmin />
       <Routes>
         <Route exact path='/' element={<Page.Product/>} />
-        <Route exact path='list-category' element={<Page.ListCategory/>} />
-        <Route exact path='list-category/1' element={<Page.EditCategory/>} />
-        <Route exact path='list-product' element={<Page.ListProduct/>} />
-        <Route exact path='list-product/1' element={<Page.EditProduct/>} />
+        <Route exact path='product/:title' element={<Page.DetailProduct />} />
         <Route exact path='complain' element={<Page.Complain />} />
+        <Route exact path='list-category' element={<Page.ListCategory/>} />
+        <Route exact path='edit-category/:title' element={<Page.EditCategory/>} />
+        <Route exact path='list-product' element={<Page.ListProduct/>} />
+        <Route exact path='edit-product/:title' element={<Page.EditProduct/>} />
       </Routes>
       </>
     )

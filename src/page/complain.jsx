@@ -1,14 +1,22 @@
 import React from 'react'
 import * as Components from '../components/index'
+import { DataUser } from '../data/user'
 
 const Complain = () => {
   return (
     <div className='complain-container'>
       <div className='complain-akun'>
         <div className='complain-akun-profile'>
-          <Components.CardAccount />
-          <Components.CardAccount />
-          <Components.CardAccount />
+          {DataUser.map((user) => {
+            return (
+              <Components.CardAccount 
+                key={user.id}
+                image={user.image}
+                name={user.name}
+                desc={user.address}
+              />
+            )
+          })}
         </div>
       </div>
       <div className='complain-chat'>

@@ -1,18 +1,14 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import * as Components from '../components/index'
+import { DataProduct } from '../data/product';
 
 const ListCategory = () => {
     const [showModal, setShowModal] = useState(false);
-    const navigate = useNavigate()
-
-    const editClick = () => {
-        navigate("/admin/list-category/1")
-      }
 
     const deleteButton = () => {
         setShowModal(prev => !prev);
-    };
+    }; 
 
 
   return (
@@ -32,14 +28,22 @@ const ListCategory = () => {
                         </tr>
                     </thead>
                     <tbody className='tbody'>
-                        <tr>
-                            <td>1</td>
-                            <td>Mouse</td>
-                            <td className='td-button'>
-                                <button className='sub-button green mar-but' onClick={editClick}> edit </button>
-                                <button className='sub-button orange mar-but' onClick={deleteButton}> delete </button>
-                            </td>
-                        </tr>
+                        {DataProduct.map((product, index) => {
+                            return (
+                            <tr key={index}>
+                                <td>{index + 1}</td>
+                                <td>{product.category}</td>
+                                <td className='td-button'>
+                                    <button className='sub-button green mar-but'>
+                                        <Link to={`/admin/edit-category/${product.title}`} className='txt-dec'>
+                                        edit 
+                                        </Link>
+                                    </button>
+                                    <button className='sub-button orange mar-but' onClick={deleteButton}> delete </button>
+                                </td>
+                            </tr>
+                            )
+                        })}
                     </tbody>
                 </table>
             </div>

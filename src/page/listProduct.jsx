@@ -1,15 +1,10 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import * as Components from '../components/index'
+import { DataProduct } from '../data/product';
 
 const ListProduct = () => {
     const [showModal, setShowModal] = useState(false);
-    const navigate = useNavigate()
-
-    const editClick = () => {
-      navigate("/admin/list-product/1")
-    }
-
 
     const deleteButton = () => {
         setShowModal(prev => !prev);
@@ -27,8 +22,8 @@ const ListProduct = () => {
                 <thead className='thead'>
                     <tr>
                         <th>No</th>
-                        <th>Photo</th>
                         <th>Product Name</th>
+                        <th>Photo</th>
                         <th>Product Desc</th>
                         <th>Price</th>
                         <th>Qty</th>
@@ -36,18 +31,24 @@ const ListProduct = () => {
                     </tr>
                 </thead>
                 <tbody className='tbody'>
-                    <tr>
-                        <td>1</td>
-                        <td>Mouse.jpg</td>
-                        <td>Mouse</td>
-                        <td>Lorem ipsum dolor sit amet.</td>
-                        <td>500.000</td>
-                        <td>150</td>
-                        <td className='td-button'>
-                            <button className='sub-button green mar-but' onClick={editClick}> edit </button>
-                            <button className='sub-button orange mar-but' onClick={deleteButton}> delete </button>
-                        </td>
-                    </tr>
+                    {DataProduct.map((product, index) => {
+                        return(
+                        <tr key={index}>
+                            <td className='td-no'>{index + 1}</td>
+                            <td className='td-til'>{product.title}</td>
+                            <td className='td-img'><img src={product.image} alt="product" /></td>
+                            <td className='td-des'>{product.description}</td>
+                            <td className='td-pri'>Rp.{product.price}</td>
+                            <td className='td-qty'>{product.qty}</td>
+                            <td className='td-button'>
+                                <Link to={`/admin/edit-product/${product.title}`}>
+                                    <button className='sub-button green mar-but'> edit </button>
+                                </Link>
+                                <button className='sub-button orange mar-but' onClick={deleteButton}> delete </button>
+                            </td>
+                        </tr>
+                        )
+                    })}
                 </tbody>
             </table>
         </div>

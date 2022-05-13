@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Input(porps) {
+export default function Input(props) {
   return (
-    <input type={porps.type} className='sub-input' placeholder={porps.placeholder}/> 
+    <input type={props.type} className='sub-input' placeholder={props.placeholder} value={props.value}/> 
   )
 }

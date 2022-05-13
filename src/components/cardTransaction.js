@@ -1,15 +1,17 @@
 import React from 'react'
 import Logo from '../assets/image/Logo2.jpg'
 
-const CardTransaction = () => {
+const CardTransaction = (props) => {
+  const {image, title, day, date, price, subtotal} = props
+
   return (
     <div className='card-trans'>
-        <img src="https://www.bhinneka.com/_next/image?url=https%3A%2F%2Fstatic.bmdstatic.com%2Fpk%2Fproduct%2Fmedium%2F5af92f60623e6.jpg&w=1080&q=75" alt="transaction" />
+        <img src={image} alt="transaction" />
         <div className='card-trans-desc'>
-            <h2>Mouse</h2>
-            <h4><span>Saturday</span>, 14 Juli 2021 </h4>
-            <p>Price: Rp.500.000</p>
-            <h3>Sub Total: 500.000</h3>
+            <h2>{title}</h2>
+            <h4><span>{day}</span>, {date}</h4>
+            <p>Price Rp.{price}</p>
+            <h3>Sub Total: Rp.{subtotal}</h3>
         </div>
         <div className='card-trans-logo'>
             <img src={Logo} alt="logo" />

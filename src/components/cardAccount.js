@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CardAccount = () => {
+const CardAccount = (props) => {
   return (
     <div className='card-account'>
-      <Link to='/profile'>
-        <img src="https://i.pinimg.com/564x/fd/9a/6b/fd9a6baa8f49b9dfdc19eb62025f25cf.jpg" alt="profile" />
+      <Link to='/user/profile'>
+        <img src={props.image} alt="profile" />
       </Link>
         <div className='card-account-name'>
-          <h3>Lia</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, modi.</p>
+          <h3>{props.name}</h3>
+          <p>{props.desc}</p>
         </div>
     </div>
   )
