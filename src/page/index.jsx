@@ -4,7 +4,11 @@ import Product from "./product";
 import DetailProduct from "./detailProduct";
 import Complain from "./complain";
 import Profile from "./profile";
-
+import { RouteUser ,RouteAdmin } from "./routes";
+import ListCategory from "./listCategory";
+import ListProduct from "./listProduct";
+import EditCategory from "./editCategory";
+import EditProduct from "./editProduct";
 
 // CSS
 import '../style/App.css'
@@ -18,4 +22,10 @@ export {
     DetailProduct,
     Complain,
     Profile,
+    RouteUser,
+    RouteAdmin,
+    ListCategory,
+    ListProduct,
+    EditCategory,
+    EditProduct,
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Logo from '../assets/image/logo.jpg'
 import * as Components from '../components/index'
+import { Link } from 'react-router-dom'
 
 function LoginPage(props){
   const {login} = props
@@ -23,7 +24,9 @@ function LoginPage(props){
         <Components.Input type='email' placeholder='Email' />
         <Components.Input type='password' placeholder='Password' />
       </div>
-      <Components.Button cName='sub-button orange' title='Login' />
+      <Link to='/user'>
+        <Components.Button cName='sub-button orange' title='Login' />
+      </Link>
     </form>
   </div>
   )
@@ -51,7 +54,9 @@ function RegisterPage(props){
           <Components.Input type='email' placeholder='Email' />
           <Components.Input type='password' placeholder='Password' />
         </div>
-        <Components.Button cName='sub-button orange' title='Register' />
+        <Link to='/admin'>
+          <Components.Button cName='sub-button orange' title='Register' />
+        </Link>
       </form>
     </div>
   )

@@ -1,8 +1,9 @@
 // Components
-import Nav from "./nav";
+import {NavUser, NavAdmin} from "./nav";
 import CardProduct from "./cardProduct";
 import CardTransaction from "./cardTransaction";
 import CardAccount from "./cardAccount";
+import CardDelete from "./cardDelete";
 
 // Sub Components
 import Button from "./sub/button";
@@ -11,10 +12,12 @@ import Paragraf from "./sub/paragraf";
 
 export {
     // Components
-    Nav,
+    NavUser,
+    NavAdmin,
     CardProduct,
     CardTransaction,
     CardAccount,
+    CardDelete,
 
     // Sub Components
     Button,
