@@ -1,10 +1,10 @@
 // Components
 import {NavUser, NavAdmin} from "./nav";
-import CardProduct from "./cardProduct";
-import CardTransaction from "./cardTransaction";
-import CardAccount from "./cardAccount";
-import CardDelete from "./cardDelete";
-import CardLogout from "./cardLogout";
+import CardProduct from "./card/cardProduct";
+import CardTransaction from "./card/cardTransaction";
+import CardAccount from "./card/cardAccount";
+import CardDelete from "./card/cardDelete";
+import CardLogout from "./card/cardLogout";
 
 // Sub Components
 import Button from "./sub/button";

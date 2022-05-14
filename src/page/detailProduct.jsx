@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import * as Components from '../components/index'
+import * as Page from '../page/index'
 import { DataProduct } from '../data/product'
 
 const DetailProduct = () => {
@@ -22,6 +23,7 @@ const DetailProduct = () => {
           </div>
       </div>
     ))}
+    <Page.Compare />
     </>
   )
 }

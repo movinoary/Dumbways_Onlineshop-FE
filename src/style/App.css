@@ -16,6 +16,27 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--blackgrey);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--fontgrey);
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blackgrey);
 }
 
 /* ----- Start Home ----- */
@@ -122,6 +143,8 @@
 }
 
 .detailproduct-img img{
+  border-radius: 7px;  
+  overflow: hidden;
   width: 450px;
   height: 500px;
   margin-right: 3rem;
@@ -146,6 +169,7 @@
 
 .detailproduct-desc-desc{
   color: var(--white);
+  padding: 12px;
   height: 200px;
   text-align: justify;
   overflow: auto;
@@ -186,7 +210,7 @@
   width: 350px;
   height: 450px;
   margin-right: 2rem;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .profile-desc-full{
@@ -207,7 +231,9 @@
 .complain-akun{
   display: flex;
   flex-direction: column;
+  z-index: 2;
   border-right: 1px solid var(--fontgrey);
+  width: 500px;
 }
 
 .complain-akun-profile{
@@ -223,6 +249,9 @@
 }
 
 .complain-chat-input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 2rem 2rem 3rem 2rem;
 }
 /* ----- End Complain ----- */
@@ -230,12 +259,26 @@
 /* ----- Start Compare ----- */
 .compare-container{
   width: 100%;
-  height: 170vh;
+  height: 200vh;
   background-color: var(--black);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.compare-container h1{
+  color: var(--orange);
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.compare-card{
+  display: flex;
+  flex-direction: row;
+  background-color: var(--blackgrey);
+  padding: 2% 5%;
 }
 
 .compare-row{
@@ -246,7 +289,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--blackgrey);
+  background-color: #222222;
 }
 
 .compare-row h1{
@@ -269,15 +312,20 @@
   font-size: 1.5rem;
 }
 
-.compare-select option,
+.compare-select select{
+  margin: 10px 0;
+}
+
 .compare-select select{
   font-size: 1rem;
   width: 100%;
   text-align: center;
-  background-color: var(--fontgrey);
+  background-color: var(--grey);
+  color: var(--black);
   border-radius: 5px;
   padding: 5px;
 }
+
 
 .compare-product h1{
   text-align: center;
@@ -288,6 +336,7 @@
 }
 
 .compare-product img{
+  border-radius: 3px;
   width: 100%;
   height: 300px;
 }

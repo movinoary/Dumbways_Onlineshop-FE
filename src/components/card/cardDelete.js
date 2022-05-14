@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import * as Components from './index'
+import * as Components from '../index'
 
 const CardDelete = ({ showModal, setShowModal }) => {
     const modalRef = useRef();

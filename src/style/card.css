@@ -56,6 +56,7 @@
     flex-direction: row;
     align-items: center;
     background-color: #303030;
+    overflow: hidden;
 }
 
 .card-trans img{
@@ -116,8 +117,12 @@
     flex-direction: row;
     align-items: center;
     justify-self: left;
-    width: 400px;
-    padding: 0.5rem;
+    width: 315px;
+    padding: 10px;
+}
+
+.card-account:hover{
+    background-color: var(--blackgrey);
 }
 
 .card-account img{
@@ -139,7 +144,7 @@
 .card-account-name p{
     font-size: 0.7rem;
     font-weight: 300;
-    width: 300px;
+    width: 220px;
     text-align: justify;
     overflow: hidden;
     text-overflow: ellipsis;

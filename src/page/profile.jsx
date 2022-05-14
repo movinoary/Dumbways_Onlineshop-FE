@@ -25,14 +25,19 @@ const Profile = () => {
         </div>
         <div className='profile-transaction'>
           <h3>My Transaction</h3>
-          <Components.CardTransaction 
-            image={item.transaction.image}
-            title={item.transaction.title}
-            day={item.transaction.day}
-            date={item.transaction.date}
-            price={item.transaction.price}
-            subtotal={item.transaction.total}
-          />
+          {item.transaction.map((item, index) => { 
+            return (
+              <Components.CardTransaction 
+                key={index}
+                image={item.image}
+                title={item.title}
+                day={item.day}
+                date={item.date}
+                price={item.price}
+                subtotal={item.total}
+              />
+            )
+          })}
         </div>
       </div>
       )

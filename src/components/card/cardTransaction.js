@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../assets/image/Logo2.jpg'
+import Logo from '../../assets/image/Logo2.jpg'
 
 const CardTransaction = (props) => {
   const {image, title, day, date, price, subtotal} = props
