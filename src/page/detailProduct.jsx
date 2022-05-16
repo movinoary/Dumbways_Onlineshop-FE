@@ -17,7 +17,7 @@ const DetailProduct = () => {
           <div className='detailproduct-desc'>
             <h1 className='detailproduct-desc-title'>{product.title}</h1>
             <p className='detailproduct-desc-stock'>Stock : {product.qty}</p>
-            <p className='detailproduct-desc-desc'>{product.description}</p>
+            <pre className='detailproduct-desc-desc'>{product.description}</pre>
             <h3 className='detailproduct-desc-price'>Rp.{product.price}</h3>
             <Components.Button cName='sub-button orange' title='Buy'/>
           </div>

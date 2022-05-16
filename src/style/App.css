@@ -133,7 +133,7 @@
 /* ----- Start Detail Product ----- */
 .detailproduct-container{
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: var(--black);
   padding: 10%;
   display: flex;
@@ -160,7 +160,7 @@
   font-size: 1.8rem;
   color: var(--orange);
 }
-
+ 
 .detailproduct-desc-stock{
   font-size: 1rem;
   color: var(--white);
@@ -170,6 +170,7 @@
 .detailproduct-desc-desc{
   color: var(--white);
   padding: 12px;
+  width: 500px;
   height: 200px;
   text-align: justify;
   overflow: auto;
@@ -233,11 +234,12 @@
   flex-direction: column;
   z-index: 2;
   border-right: 1px solid var(--fontgrey);
-  width: 500px;
+  width: 450px;
 }
 
 .complain-akun-profile{
   margin: 120px 20px 10px 20px;
+  cursor: pointer;
 }
 
 .complain-chat{

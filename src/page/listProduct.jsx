@@ -41,9 +41,11 @@ const ListProduct = () => {
                             <td className='td-pri'>Rp.{product.price}</td>
                             <td className='td-qty'>{product.qty}</td>
                             <td className='td-button'>
-                                <Link to={`/admin/edit-product/${product.title}`}>
-                                    <button className='sub-button green mar-but'> edit </button>
-                                </Link>
+                                <button className='sub-button green mar-but'> 
+                                    <Link className='txt-dec' to={`/admin/edit-product/${product.title}`}>
+                                        edit 
+                                    </Link>
+                                </button>
                                 <button className='sub-button orange mar-but' onClick={deleteButton}> delete </button>
                             </td>
                         </tr>
