@@ -1,5 +1,7 @@
 // Page
 import Home from "./home";
+import LoginPage from "./login";
+import RegisterPage from "./register";
 import Product from "./product";
 import DetailProduct from "./detailProduct";
 import Compare from "./compare";
@@ -18,7 +20,9 @@ import '../style/card.css'
 import '../style/nav.css'
 
 export {
-    Home, 
+    Home,
+    LoginPage,
+    RegisterPage,
     Product,
     DetailProduct,
     Compare,
