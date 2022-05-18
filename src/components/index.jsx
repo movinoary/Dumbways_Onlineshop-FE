@@ -24,5 +24,5 @@ export {
     // Sub Components
     Button,
     Input,
-    Paragraf
+    Paragraf,
 }

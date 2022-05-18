@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Logo from '../assets/image/logo.jpg'
 import * as Components from '../components/index'
-import * as Page from './index'
 import { useNavigate } from 'react-router-dom'
 
 function LoginPage(props){
@@ -10,7 +9,7 @@ function LoginPage(props){
   const navigate = useNavigate()
   const [state, setState] = useState({
     isLogin: false,
-    user: {
+    admin: {
         email: '',
         password: ''
     }
@@ -18,12 +17,12 @@ function LoginPage(props){
 
 
 useEffect(() => {
-  if (state.user.email) {
-      console.log("Berhasil Login");
-      console.log(state);
+  if (state.admin.email) {
+      console.log("Berhasil Login")
+      console.log(state)
       navigate('/admin')
   }
-}, [state])
+} )
 
 
 const handleOnSubmit = (e) => {
@@ -32,7 +31,7 @@ const handleOnSubmit = (e) => {
   const password = document.getElementById('password').value
   setState({
       isLogin: true,
-      user: {
+      admin: {
           email,
           password
       }
@@ -41,7 +40,7 @@ const handleOnSubmit = (e) => {
 
   return(
     <>
-    {state.isLogin ? <Page.Product /> :
+    {state.isLogin ? <></>:
       <div className='home-container'>
         <div className='home-left'>
           <img src={Logo} alt="logo" />
