@@ -44,9 +44,30 @@ function RegisterPage(props){
       <form className='home-right-register' onSubmit={handleOnSubmit}>
         <h3>Register</h3>
         <div className='home-form'>
-          <input className='sub-input' onChange={handleOnChange} name='fullname' value={state.fullname} type='text' placeholder='Name' />
-          <input className='sub-input' onChange={handleOnChange} name='email' value={state.email} type='email' placeholder='Email' />
-          <input className='sub-input' onChange={handleOnChange} name='password' value={state.password} type='password' placeholder='Password' />
+          <input 
+            className='sub-input' 
+            onChange={handleOnChange} 
+            name='fullname' 
+            value={state.fullname} 
+            type='text' 
+            placeholder='Name' 
+          />
+          <input 
+            className='sub-input' 
+            onChange={handleOnChange} 
+            name='email' 
+            value={state.email} 
+            type='email' 
+            placeholder='Email' 
+          />
+          <input 
+            className='sub-input' 
+            onChange={handleOnChange} 
+            name='password' 
+            value={state.password} 
+            type='password' 
+            placeholder='Password' 
+          />
         </div>
           <Components.Button cName='sub-button orange' title='Register' />
       </form>
