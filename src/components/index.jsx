@@ -3,8 +3,8 @@ import {NavUser, NavAdmin} from "./nav";
 import CardProduct from "./card/cardProduct";
 import CardTransaction from "./card/cardTransaction";
 import CardAccount from "./card/cardAccount";
-import CardDelete from "./card/cardDelete";
-import CardLogout from "./card/cardLogout";
+import CardDelete from "./modal/cardDelete";
+import CardLogout from "./modal/cardLogout";
 
 // Sub Components
 import Button from "./sub/button";
